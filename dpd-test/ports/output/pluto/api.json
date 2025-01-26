@@ -1,7 +1,0 @@
-{
-  "schema" : {
-    "tables" : [ ],
-    "databaseName" : "odmdb"
-  },
-  "datastoreapi" : "1.0.0"
-}

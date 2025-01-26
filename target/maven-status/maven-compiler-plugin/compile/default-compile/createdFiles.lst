@@ -8,6 +8,7 @@ org/opendatamesh/odm/cli/commands/policy/update/UpdatePolicyEngineCommand.class
 org/opendatamesh/odm/cli/commands/registry/publish/RegistryPublishCommand.class
 org/opendatamesh/odm/cli/commands/devops/list/DevOpsListCommands.class
 org/opendatamesh/odm/cli/utils/PrintUtils$1.class
+org/opendatamesh/odm/cli/commands/local/ImportTool.class
 org/opendatamesh/odm/cli/commands/policy/get/PolicyGetCommand.class
 org/opendatamesh/odm/cli/commands/blueprint/create/CreateBlueprintCommand.class
 org/opendatamesh/odm/cli/commands/devops/stop/StopTaskCommand.class
@@ -42,6 +43,7 @@ org/opendatamesh/odm/cli/commands/blueprint/list/ListBlueprintCommand.class
 org/opendatamesh/odm/cli/commands/policy/list/ListPolicyCommand.class
 org/opendatamesh/odm/cli/commands/devops/start/DevOpsStartCommands.class
 org/opendatamesh/odm/cli/commands/policy/update/UpdatePolicyCommand.class
+org/opendatamesh/odm/cli/commands/local/JDBCImportTool.class
 org/opendatamesh/odm/cli/commands/devops/list/ListTasksCommand.class
 org/opendatamesh/odm/cli/commands/blueprint/init/InitBlueprintCommand$1.class
 org/opendatamesh/odm/cli/commands/registry/upload/UploadDpvCommand.class

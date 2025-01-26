@@ -97,39 +97,12 @@ public class ImportCommand implements Runnable {
             ParseResult results = descriptorParser.parse(descriptorLocation, options);
             DataProductVersionDPDS descriptor = results.getDescriptorDocument();
 
-            PortDPDS port = new PortDPDS();
-            String portName = outParamMap.get("name");
-            if (portName == null) {
-                portName = UUID.randomUUID().toString();
-                outParamMap.put("name", portName);
-            }
-            
 
-            String portRef = "ports/output/" + portName + "/port.json";
-            port.setRef(portRef);
-            port.setRawContent(" {\"$ref\": \"" + portRef + "\"}");
+            ImportTool<PortDPDS> importTool = new JDBCImportTool();
+            PortDPDS port = importTool.importElement(descriptorFile, new PortDPDS(), outParamMap);
             descriptor.getInterfaceComponents().getOutputPorts().add(port);
 
-            File portFile = new File(descriptorFile.getParentFile(), portRef);
-            File portFoder = portFile.getParentFile();
-
-            ObjectMapper mapper = ObjectMapperFactory.JSON_MAPPER;
-
-            //CliFileUtils.createFileFromTemplate(portFoder.getPath(), portFile.getName(), PORT_TEMPLATE_FILEPATH, outParamMap);
-            PortDPDS portDef = importOutputPort(outParamMap);
-            String portDefContent = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(portDef);
-            CliFileUtils.writeFile(portFoder.getPath(), portFile.getName(), portDefContent);
-
-           JSONObject api = new JSONObject();
-           api.appendField("datastoreapi", "1.0.0");
-           JSONObject schema = new JSONObject();
-           if(outParamMap.containsKey("database")) schema.appendField("databaseName", outParamMap.get("database"));
-           if(outParamMap.containsKey("schema")) schema.appendField("schemaName", outParamMap.get("schema"));
-           schema.appendField("tables", new JSONArray());
-           api.appendField("schema", schema);
-
-           CliFileUtils.writeFile(portFoder.getPath(), "api.json", mapper.writerWithDefaultPrettyPrinter().writeValueAsString(api));
-
+           
             String serializedContent = DPDSSerializer.DEFAULT_JSON_SERIALIZER.serialize(descriptor, "canonical");
             try (FileWriter writer = new FileWriter(descriptorFile)) {
                 writer.write(serializedContent);
@@ -140,26 +113,7 @@ public class ImportCommand implements Runnable {
         }
     }
 
-    PortDPDS importOutputPort(Map<String, String> params) {
-        PortDPDS port = new PortDPDS();
-
-        port.setName(params.get("name"));
-        port.setVersion("1.0.0");
-        
-        PromisesDPDS promises = new PromisesDPDS();
-        StandardDefinitionDPDS apiStdDef = new StandardDefinitionDPDS();
-        apiStdDef.setSpecification("datastoreapi");
-        apiStdDef.setSpecification("1.0.0");
-        DefinitionReferenceDPDS deinition = new DefinitionReferenceDPDS();
-        deinition.setMediaType("text/json");
-        deinition.setRef("api.json");
-        apiStdDef.setDefinition(deinition);   
-        promises.setApi(apiStdDef);
-        port.setPromises(promises);
-
-        return port;
-    }
-
+   
     public void setDefaultParmsForOutputPortTarget(Map<String, String> parameters) {
         if (parameters.get("displayName") == null)
             parameters.put("displayName", parameters.get("name"));
