@@ -1,0 +1,19 @@
+{
+  "externalReference" : false,
+  "name" : "pluto",
+  "version" : "1.0.0",
+  "tags" : [ ],
+  "promises" : {
+    "api" : {
+      "externalReference" : false,
+      "tags" : [ ],
+      "specification" : "1.0.0",
+      "definition" : {
+        "inline" : false,
+        "resolvedRef" : false,
+        "mediaType" : "text/json",
+        "$ref" : "api.json"
+      }
+    }
+  }
+}

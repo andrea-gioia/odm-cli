@@ -1,0 +1,603 @@
+[
+  {
+    "name" : "java.lang.Boolean",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+    "name" : "java.lang.Long",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.OdmCliInit",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.blueprint.BlueprintCommands",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "propertiesFileOption" },
+      { "name" : "serverUrlOption" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.blueprint.create.CreateBlueprintCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "blueprintCommands" },
+      { "name" : "blueprintPath" },
+      { "name" : "checkContent" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.blueprint.init.InitBlueprintCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "blueprintCommands" },
+      { "name" : "blueprintId" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.blueprint.list.ListBlueprintCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "blueprintCommands" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.devops.DevOpsCommands",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "propertiesFileOption" },
+      { "name" : "serverUrlOption" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.devops.get.DevOpsGetCommands",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "devOpsCommands" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.devops.get.GetActivityCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "activityId" },
+      { "name" : "devopsGetCommands" },
+      { "name" : "status" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.devops.get.GetTaskCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "devOpsGetCommands" },
+      { "name" : "taskId" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.devops.list.DevOpsListCommands",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "devOpsCommands" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.devops.list.ListActivitiesCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "devOpsListCommands" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.devops.list.ListTasksCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "devOpsListCommands" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.devops.publish.DevOpsPublishCommands",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "devOpsCommands" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.devops.publish.PublishActivityCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "activityPath" },
+      { "name" : "devOpsPublishCommands" },
+      { "name" : "startActivity" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.devops.start.DevOpsStartCommands",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "devOpsCommands" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.devops.start.StartActivityCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "activityId" },
+      { "name" : "devOpsStartCommands" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.devops.stop.DevOpsStopCommands",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "devOpsCommands" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.devops.stop.StopTaskCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "devOpsStopActivityCommand" },
+      { "name" : "taskId" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.local.AddCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "descriptorFilePath" },
+      { "name" : "initParams" },
+      { "name" : "portName" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.local.ImportCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "descriptorFilePath" },
+      { "name" : "from" },
+      { "name" : "inParams" },
+      { "name" : "outParams" },
+      { "name" : "to" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.local.InitCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "descriptorFilePath" },
+      { "name" : "initParams" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.local.LocalCommands",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.local.ValidateCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "dataProductVersionDescriptorPath" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.policy.PolicyCommands",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "propertiesFileOption" },
+      { "name" : "serverUrlOption" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.policy.get.GetPolicyCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "policyGetCommand" },
+      { "name" : "policyId" },
+      { "name" : "rootIdFlag" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.policy.get.GetPolicyEngineCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "engineId" },
+      { "name" : "policyGetCommand" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.policy.get.GetPolicyEvaluationResultCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "policyGetCommand" },
+      { "name" : "resultId" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.policy.get.PolicyGetCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "policyCommands" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.policy.list.ListPolicyCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "policyListCommand" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.policy.list.ListPolicyEngineCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "policyListCommand" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.policy.list.ListPolicyEvaluationResultCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "policyListCommand" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.policy.list.PolicyListCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "policyCommands" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.policy.publish.PolicyPublishCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "policyCommands" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.policy.publish.PublishPolicyCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "policyDescriptorPath" },
+      { "name" : "policyPublishCommand" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.policy.publish.PublishPolicyEngineCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "policyEngineDescriptorPath" },
+      { "name" : "policyPublishCommand" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.policy.publish.PublishPolicyEvaluationResultCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "policyEvaluationResultDescriptorPath" },
+      { "name" : "policyPublishCommand" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.policy.update.PolicyUpdateCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "policyCommands" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.policy.update.UpdatePolicyCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "policyDescriptorPath" },
+      { "name" : "policyId" },
+      { "name" : "policyUpdateCommand" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.policy.update.UpdatePolicyEngineCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "policyEngineDescriptorPath" },
+      { "name" : "policyEngineId" },
+      { "name" : "policyUpdateCommand" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.policy.update.UpdatePolicyEvaluationResultCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "policyEvaluationResultDescriptorPath" },
+      { "name" : "policyEvaluationResultId" },
+      { "name" : "policyUpdateCommand" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.policy.validate.PolicyValidateCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "policyCommands" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.policy.validate.ValidateDocumentCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "evaluationRequestPath" },
+      { "name" : "policyValidateCommand" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.registry.RegistryCommands",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "propertiesFileOption" },
+      { "name" : "serverUrlOption" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.registry.get.GetDpCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "dataProductId" },
+      { "name" : "registryGetCommand" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.registry.get.GetDpvCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "dataProductId" },
+      { "name" : "dataProductVersion" },
+      { "name" : "registryGetCommand" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.registry.get.RegistryGetCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "registryCommands" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.registry.list.ListDpCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "registryListCommand" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.registry.list.ListDpvCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "dataProductId" },
+      { "name" : "registryListCommand" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.registry.list.RegistryListCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "registryCommands" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.registry.publish.PublishDpCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "dataProductDescriptorPath" },
+      { "name" : "registryPublishCommand" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.registry.publish.PublishDpvCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "dataProductId" },
+      { "name" : "dataProductVersionDescriptorPath" },
+      { "name" : "registryPublishCommand" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.registry.publish.RegistryPublishCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "registryCommands" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.registry.upload.RegistryUploadCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "registryCommands" }
+    ]
+  },
+  {
+    "name" : "org.opendatamesh.odm.cli.commands.registry.upload.UploadDpvCommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "registryUploadCommand" }
+    ]
+  },
+  {
+    "name" : "picocli.CommandLine$AutoHelpMixin",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "helpRequested" },
+      { "name" : "versionRequested" }
+    ]
+  }
+]
