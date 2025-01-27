@@ -9,64 +9,49 @@ import java.util.ServiceLoader;
 import org.opendatamesh.odm.cli.commands.local.ImportTool;
 
 public class CliExtensionUtils {
+
+    private static boolean classLoaderIntialized = false;
+
     public static ImportTool getImportTool(String from, String to) {
 
-        String classpath = System.getProperty("java.class.path");
-        // Split the classpath using the path separator
-        String[] classpathEntries = classpath.split(System.getProperty("path.separator"));
+        ImportTool tool = null;
 
-        // Print each entry
-        System.out.println("JAR files in the classpath:");
-        for (String entry : classpathEntries) {
-            if (entry.endsWith(".jar")) { // Only include JAR files
-                System.out.println(entry);
-            }
-        }
-        System.out.println("Classpath: " + classpath);
-        System.out.println("ImportTool loaded by: " + ImportTool.class.getClassLoader());
-        System.out.println("Current thread context class loader: " + Thread.currentThread().getContextClassLoader());
-
-        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         try {
-            addFolderToClasspath("./extensions/odm-platform-cli-extensions-1.0.12.jar", classLoader);
+            ClassLoader classLoader = getClassLoader();
+            
+            ServiceLoader<ImportTool> loader = ServiceLoader.load(ImportTool.class, classLoader);
+            for (ImportTool t : loader) {
+                System.out.println(t.from() + " -> " + t.to());
+                if (from.equalsIgnoreCase(t.from()) && to.equalsIgnoreCase(t.to())) {
+                    tool = t;
+                    break;
+                }
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
-        // Check if the class loader is an instance of URLClassLoader
-        if (classLoader instanceof URLClassLoader) {
-            URLClassLoader urlClassLoader = (URLClassLoader) classLoader;
 
-            // Get URLs and print each one
-            URL[] urls = urlClassLoader.getURLs();
-            System.out.println("JARs in classpath:");
-            for (URL url : urls) {
-                System.out.println(url);
-            }
-        } else {
-            System.out.println("ClassLoader is not an instance of URLClassLoader.");
-        }
-
-        ServiceLoader<ImportTool> loader = ServiceLoader.load(ImportTool.class, classLoader);
-
-        System.out.println("Loader: " + loader);
-        for (ImportTool tool : loader) {
-            System.out.println(tool.from() + " -> " + tool.to());
-            if (from.equalsIgnoreCase(tool.from()) && to.equalsIgnoreCase(tool.to())) {
-                return tool;
-            }
-        }
-
-        return null;
+        return tool;
     }
 
-    public static void addFolderToClasspath(String folderPath, ClassLoader classLoader) throws Exception {
-        // Convert the folder path to a URL
-        File folder = new File(folderPath);
-        if (!folder.exists()) {
-            throw new IllegalArgumentException("Invalid file path: " + folderPath);
+    private static ClassLoader getClassLoader() throws Exception {
+        ClassLoader classLoader = Thread.currentThread().getContextClassLoader(); // ImportTool.class.getClassLoader();
+        if (classLoaderIntialized == false) {
+            addJarInFolderToClassLoader(new File("./extensions"), classLoader);
+            classLoaderIntialized = true;
         }
-        URL folderUrl = folder.toURI().toURL();
+
+        return classLoader;
+    }
+
+    private static void addJarInFolderToClassLoader(File folder, ClassLoader classLoader) throws Exception {
+        // Convert the folder path to a URL
+        if (!folder.exists() || !folder.isDirectory()) {
+            throw new IllegalArgumentException("Invalid folder path: " + folder.getPath());
+        }
+
+        // Filter and list all .jar files
+        File[] jarFiles = folder.listFiles((dir, name) -> name.toLowerCase().endsWith(".jar"));
 
         // Get the system classloader
         URLClassLoader systemClassLoader = (URLClassLoader) classLoader;
@@ -75,7 +60,56 @@ public class CliExtensionUtils {
         Method addURLMethod = URLClassLoader.class.getDeclaredMethod("addURL", URL.class);
         addURLMethod.setAccessible(true);
 
-        // Add the folder URL to the classpath
-        addURLMethod.invoke(systemClassLoader, folderUrl);
+        if (jarFiles != null && jarFiles.length > 0) {
+            System.out.println("JAR files in folder " + folder.getPath() + ":");
+            for (File jarFile : jarFiles) {
+                System.out.println(jarFile.getName());
+                // Add the folder URL to the classpath
+                addURLMethod.invoke(systemClassLoader, jarFile.toURI().toURL());
+            }
+        }
+    }
+
+    // =========
+    // Debug
+    // =========
+    public static void printClassLoader() {
+        System.out.println("ImportTool loaded by: " + ImportTool.class.getClassLoader());
+        System.out.println("Current thread context class loader: " + Thread.currentThread().getContextClassLoader());
+    }
+
+    public static void printJarInClasspath() {
+        String classpath = System.getProperty("java.class.path");
+        System.out.println("Classpath: " + classpath);
+
+        // Split the classpath using the path separator
+        String[] classpathEntries = classpath.split(System.getProperty("path.separator"));
+
+        // Print each entry
+        System.out.println("JARs in classpath:");
+        for (String entry : classpathEntries) {
+            if (entry.endsWith(".jar")) { // Only include JAR files
+                System.out.println(entry);
+            }
+        }
+    }
+
+    public static void printJarInClassLoader() throws Exception {
+        ClassLoader classLoader = getClassLoader();
+
+        // Check if the class loader is an instance of URLClassLoader
+        if (classLoader instanceof URLClassLoader) {
+            URLClassLoader urlClassLoader = (URLClassLoader) classLoader;
+
+            // Get URLs and print each one
+            URL[] urls = urlClassLoader.getURLs();
+            System.out.println("JARs in classloader:");
+            for (URL url : urls) {
+                System.out.println(url);
+            }
+        } else {
+            System.out.println("ClassLoader is not an instance of URLClassLoader.");
+        }
+
     }
 }

@@ -70,7 +70,7 @@ public class ImportCommand implements Runnable {
    
     @Override
     public void run() {
-        if(!to.equalsIgnoreCase("output-port")) {
+        if(!to.equalsIgnoreCase("port")) {
             System.err.println("Unsopported source [" + to + "]");
         }
 
