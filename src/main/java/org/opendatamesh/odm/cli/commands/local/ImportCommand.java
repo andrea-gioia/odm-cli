@@ -29,6 +29,7 @@ import org.opendatamesh.dpds.parser.DPDSParser;
 import org.opendatamesh.dpds.parser.DPDSSerializer;
 import org.opendatamesh.dpds.parser.ParseOptions;
 import org.opendatamesh.dpds.parser.ParseResult;
+import org.opendatamesh.odm.cli.utils.CliExtensionUtils;
 import org.opendatamesh.odm.cli.utils.CliFileUtils;
 import org.opendatamesh.odm.cli.utils.CliOptionUtils;
 
@@ -98,7 +99,12 @@ public class ImportCommand implements Runnable {
             DataProductVersionDPDS descriptor = results.getDescriptorDocument();
 
 
-            ImportTool<PortDPDS> importTool = new JDBCImportTool();
+            ImportTool<PortDPDS> importTool = CliExtensionUtils.getImportTool(from, to);
+            if(importTool == null) {
+                System.out.println("Impossible to load import tool extension form calsspath for pair from:" + from + " - to: " + to + "");
+                importTool = new TestImportTool();
+            }
+            
             PortDPDS port = importTool.importElement(descriptorFile, new PortDPDS(), outParamMap);
             descriptor.getInterfaceComponents().getOutputPorts().add(port);
 

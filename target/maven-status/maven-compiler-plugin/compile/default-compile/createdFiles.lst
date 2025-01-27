@@ -43,7 +43,6 @@ org/opendatamesh/odm/cli/commands/blueprint/list/ListBlueprintCommand.class
 org/opendatamesh/odm/cli/commands/policy/list/ListPolicyCommand.class
 org/opendatamesh/odm/cli/commands/devops/start/DevOpsStartCommands.class
 org/opendatamesh/odm/cli/commands/policy/update/UpdatePolicyCommand.class
-org/opendatamesh/odm/cli/commands/local/JDBCImportTool.class
 org/opendatamesh/odm/cli/commands/devops/list/ListTasksCommand.class
 org/opendatamesh/odm/cli/commands/blueprint/init/InitBlueprintCommand$1.class
 org/opendatamesh/odm/cli/commands/registry/upload/UploadDpvCommand.class
@@ -61,10 +60,12 @@ org/opendatamesh/odm/cli/commands/devops/publish/PublishActivityCommand.class
 org/opendatamesh/odm/cli/commands/registry/get/GetDpvCommand.class
 org/opendatamesh/odm/cli/commands/registry/publish/PublishDpvCommand.class
 org/opendatamesh/odm/cli/commands/registry/RegistryCommands.class
+org/opendatamesh/odm/cli/utils/CliExtensionUtils.class
 org/opendatamesh/odm/cli/commands/local/AddCommand.class
 org/opendatamesh/odm/cli/OdmCliApplication.class
 org/opendatamesh/odm/cli/commands/policy/list/PolicyListCommand.class
 org/opendatamesh/odm/cli/commands/local/ValidateCommand.class
+org/opendatamesh/odm/cli/commands/local/TestImportTool.class
 org/opendatamesh/odm/cli/commands/local/ImportCommand.class
 org/opendatamesh/odm/cli/commands/registry/list/ListDpCommand.class
 META-INF/native-image/picocli-generated/org.opendatamesh/odm-platform-cli/resource-config.json

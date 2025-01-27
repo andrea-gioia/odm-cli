@@ -27,6 +27,7 @@
 /home/angioia/code/odm-cli/src/main/java/org/opendatamesh/odm/cli/TestMain.java
 /home/angioia/code/odm-cli/src/main/java/org/opendatamesh/odm/cli/commands/policy/get/GetPolicyCommand.java
 /home/angioia/code/odm-cli/src/main/java/org/opendatamesh/odm/cli/commands/local/AddCommand.java
+/home/angioia/code/odm-cli/src/main/java/org/opendatamesh/odm/cli/utils/CliExtensionUtils.java
 /home/angioia/code/odm-cli/src/main/java/org/opendatamesh/odm/cli/commands/policy/list/ListPolicyEngineCommand.java
 /home/angioia/code/odm-cli/src/main/java/org/opendatamesh/odm/cli/commands/registry/get/GetDpvCommand.java
 /home/angioia/code/odm-cli/src/main/java/org/opendatamesh/odm/cli/utils/ObjectMapperUtils.java
@@ -36,9 +37,9 @@
 /home/angioia/code/odm-cli/src/main/java/org/opendatamesh/odm/cli/commands/devops/DevOpsCommands.java
 /home/angioia/code/odm-cli/src/main/java/org/opendatamesh/odm/cli/commands/policy/get/GetPolicyEngineCommand.java
 /home/angioia/code/odm-cli/src/main/java/org/opendatamesh/odm/cli/commands/blueprint/list/ListBlueprintCommand.java
-/home/angioia/code/odm-cli/src/main/java/org/opendatamesh/odm/cli/commands/local/JDBCImportTool.java
 /home/angioia/code/odm-cli/src/main/java/org/opendatamesh/odm/cli/commands/policy/validate/PolicyValidateCommand.java
 /home/angioia/code/odm-cli/src/main/java/org/opendatamesh/odm/cli/commands/devops/start/DevOpsStartCommands.java
+/home/angioia/code/odm-cli/src/main/java/org/opendatamesh/odm/cli/commands/local/TestImportTool.java
 /home/angioia/code/odm-cli/src/main/java/org/opendatamesh/odm/cli/commands/policy/PolicyCommands.java
 /home/angioia/code/odm-cli/src/main/java/org/opendatamesh/odm/cli/commands/devops/get/GetTaskCommand.java
 /home/angioia/code/odm-cli/src/main/java/org/opendatamesh/odm/cli/commands/devops/start/StartActivityCommand.java
