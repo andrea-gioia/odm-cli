@@ -1,8 +1,8 @@
-# odmcli local init
+# odmcli local import
 
 ## Usage
 
-`odmcli local init`
+`odmcli local import`
 
 ## Description
 
@@ -22,7 +22,7 @@ Option|Default|Description
 
 ### Create a new descriptor file
 ```bash
-./odm-cli local import -f dpd/data-product-descriptor.json \
+./odmcli local import -f dpd/data-product-descriptor.json \
       --from sql-ddl --to output-port \
       --in-param file=test.sql \
       --out-param name=oport123 \
