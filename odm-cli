@@ -20,4 +20,12 @@ fi
 
 #java -jar "target/$jar_file" "$@"
 
-java -cp "extensions/*:target/$jar_file" -jar "target/$jar_file" "$@"
+
+#java -cp "extensions/*.jar:target/$jar_file" -jar "target/$jar_file" "$@"
+
+echo "jar file: $jar_file"
+echo extensions/*.jar
+java -cp "extensions/*.jar:target/$jar_file" org.springframework.boot.loader.JarLauncher "$@"
+
+#java -cp "target/$jar_file:target/$jar_file!/BOOT-INF/classes:target/$jar_file!/BOOT-INF/lib/*:extensions/*.jar" org.opendatamesh.odm.cli.OdmCliApplication "$@"
+
