@@ -2,7 +2,7 @@
 
 ## Usage
 
-`odm-cli`
+`odmcli`
 
 ## Description
 
@@ -12,8 +12,8 @@ Manage local env and all interactions with the remote ODM Platform's services
 
 Command|Description
 -------|----------
-`odm-cli local`|bla bla
-`odm-cli registry`|bla bla
-`odm-cli blueprint`|bla bla
-`odm-cli devops`|bla bla
-`odm-cli policy`|bla bla
+`odmcli local`|bla bla
+`odmcli registry`|bla bla
+`odmcli blueprint`|bla bla
+`odmcli devops`|bla bla
+`odmcli policy`|bla bla
