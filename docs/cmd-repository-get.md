@@ -16,7 +16,7 @@ Get an enetity from the repository
 
 Option|Default|Description
 -------|----------|-------
-`--type`||Type of the entity to get (dp|dpv)
+`--type`||Type of the entity to get (dp\|dpv)
 `--id`||id of the enetity to get
 `--dp-version`||version of the dp
 
