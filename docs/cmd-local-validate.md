@@ -2,7 +2,7 @@
 
 ## Usage
 
-`odmcli local`
+`odmcli local validate`
 
 ## Description
 
