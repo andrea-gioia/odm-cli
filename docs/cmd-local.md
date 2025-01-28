@@ -14,7 +14,7 @@ Command|Description
 -------|----------
 [`odmcli local init`](cmd-local-init.md)|Initializes a descriptor
 [`odmcli local list`](cmd-local-list.md)|Lists elements of a descriptor
-[`odmcli local add`](cmd-local-get.md)|Gets an element from descriptor
+[`odmcli local get`](cmd-local-get.md)|Gets an element from descriptor
 [`odmcli local add`](cmd-local-add.md)|Adds an element to descriptor
 [`odmcli local rm`](cmd-local-rm.md)|Removes an element from descriptor
 [`odmcli local set`](cmd-local-set.md)|Sets a field value of a descriptor
