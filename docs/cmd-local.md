@@ -13,7 +13,7 @@ Manage local env
 Command|Description
 -------|----------
 [`odmcli local init`](cmd-local-init.md)|Initializes a descriptor
-[`odmcli local list`](cmd-local-list.md)|Lisst elements of a descriptor
+[`odmcli local list`](cmd-local-list.md)|List elements of a descriptor
 [`odmcli local add`](cmd-local-add.md)|Lists an element to descriptor
 [`odmcli local rm`](cmd-local-rm.md)|Removes an element from descriptor
 [`odmcli local set`](cmd-local-set.md)|Sets a field value of a descriptor
