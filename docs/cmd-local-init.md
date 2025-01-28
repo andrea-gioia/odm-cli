@@ -2,11 +2,11 @@
 
 ## Usage
 
-`odmcli local`
+`odmcli local init`
 
 ## Description
 
-Initialize a descriptor file
+Initializes a descriptor file. 
 
 ## Options
 
