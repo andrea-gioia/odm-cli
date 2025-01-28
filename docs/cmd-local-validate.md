@@ -21,7 +21,7 @@ Option|Default|Description
 
 ## Examples
 
-### Create a new descriptor file
+### Validate a descriptor file
 ```bash
 ./odmcli local validate -f dpd/data-product-descriptor.json
 ```
