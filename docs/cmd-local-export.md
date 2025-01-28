@@ -17,7 +17,7 @@ Option|Default|Description
 `--source`| |Source name
 `--to`| |Target type
 `--target`| |Target name
-`--target-system`| |Target name
+`--target-system`| |Target system name, used to locate access properties stored in the `⁓/.odmcli/settings.json`
 `--in-param <KEY=VALUE>`| |Parameters related to source
 `--out-param <KEY=VALUE>`| |Parameter related to target
 
