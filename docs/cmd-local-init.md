@@ -8,6 +8,10 @@
 
 Initializes a descriptor file. 
 
+**⚒️Implementation details:**
+
+1. 
+
 ## Options
 
 Option|Default|Description
