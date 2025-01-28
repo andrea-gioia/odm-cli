@@ -6,7 +6,7 @@
 
 ## Description
 
-Get an enetity from the repository
+Get an entity from the repository
 
 **⚒️Implementation details:**
 
