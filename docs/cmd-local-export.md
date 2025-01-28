@@ -29,6 +29,28 @@ Option|Default|Description
       --to yaml --target dpdy/data-product-descriptor.yaml
 ```
 
+### Export a descriptor to text
+```bash
+./odmcli local export -f dpd/data-product-descriptor.json \
+      --from descriptor \
+      --to text 
+```
+Because the target is not defined the export results is printed to stdout
+
+### Export a descriptor to md
+```bash
+./odmcli local export -f dpd/data-product-descriptor.json \
+      --from descriptor \
+      --to md --target ./data-product-doc.md
+```
+
+### Export a descriptor to html
+```bash
+./odmcli local export -f dpd/data-product-descriptor.json \
+      --from descriptor \
+      --to html --target ./data-product-doc.html
+```
+
 ### Export a descriptor as a DPROD ttl file
 ```bash
 ./odmcli local export -f dpd/data-product-descriptor.json \
