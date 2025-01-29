@@ -17,6 +17,7 @@ List entities from the repository
 Option|Default|Description
 -------|----------|-------
 `--type`||Type of the entity to list (dp\|dpv)
+`--dp-id`||Id of data product. Applicable only if `type` is equal to dpv
 
 ## Examples
 
