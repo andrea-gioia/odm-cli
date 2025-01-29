@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
+import org.opendatamesh.odm.cli.config.CliConfig;
 import org.opendatamesh.odm.cli.utils.CliFileUtils;
 import org.opendatamesh.odm.cli.utils.CliOptionUtils;
 
@@ -33,6 +34,8 @@ public class InitCommand implements Runnable {
 
         try {
 
+            CliConfig.load();
+            
             File descriptorFile = new File(descriptorFilePath);
 
             Map<String, String> paramMap = CliOptionUtils.parseParams(initParams);

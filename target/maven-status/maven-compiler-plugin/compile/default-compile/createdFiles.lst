@@ -40,6 +40,7 @@ org/opendatamesh/odm/cli/utils/PrintUtils$2.class
 META-INF/native-image/picocli-generated/org.opendatamesh/odm-platform-cli/reflect-config.json
 org/opendatamesh/odm/cli/commands/OdmCliInit.class
 org/opendatamesh/odm/cli/commands/blueprint/list/ListBlueprintCommand.class
+org/opendatamesh/odm/cli/config/CliConfig.class
 org/opendatamesh/odm/cli/commands/policy/list/ListPolicyCommand.class
 org/opendatamesh/odm/cli/commands/devops/start/DevOpsStartCommands.class
 org/opendatamesh/odm/cli/commands/policy/update/UpdatePolicyCommand.class

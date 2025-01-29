@@ -61,5 +61,6 @@
 /home/angioia/code/odm-cli/src/main/java/org/opendatamesh/odm/cli/utils/PrintUtils.java
 /home/angioia/code/odm-cli/src/main/java/org/opendatamesh/odm/cli/commands/registry/RegistryCommands.java
 /home/angioia/code/odm-cli/src/main/java/org/opendatamesh/odm/cli/commands/policy/update/UpdatePolicyEvaluationResultCommand.java
+/home/angioia/code/odm-cli/src/main/java/org/opendatamesh/odm/cli/config/CliConfig.java
 /home/angioia/code/odm-cli/src/main/java/org/opendatamesh/odm/cli/commands/policy/publish/PublishPolicyEvaluationResultCommand.java
 /home/angioia/code/odm-cli/src/main/java/org/opendatamesh/odm/cli/commands/devops/stop/StopTaskCommand.java
