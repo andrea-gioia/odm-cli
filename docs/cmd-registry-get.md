@@ -1,12 +1,12 @@
-# odmcli repository get
+# odmcli registry get
 
 ## Usage
 
-`odmcli repository get`
+`odmcli registry get`
 
 ## Description
 
-Get an entity from the repository
+Get an entity from the registry
 
 **⚒️Implementation details:**
 
