@@ -1,12 +1,12 @@
-# odmcli repository publish
+# odmcli registry publish
 
 ## Usage
 
-`odmcli repository publish`
+`odmcli registry publish`
 
 ## Description
 
-Publish an entity in the `repository-service`
+Publish an entity in the `registry-service`
 
 **⚒️Implementation details:**
 
@@ -22,7 +22,7 @@ Option|Default|Description
 
 ## Examples
 
-### Publish a local descriptor in the repository
+### Publish a local descriptor in the registry
 ```bash
 ./odmcli registry publish --type dpv --dp-id dp123 -f dpd/data-product-descriptor.json
 ```
