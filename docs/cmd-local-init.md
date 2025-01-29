@@ -26,7 +26,7 @@ Initializes a descriptor file.
 
 Option|Default|Description
 -------|----------|-------
-`-f, --file`|PATH/data-product-descriptor.json|Name of the descriptor file
+`-f, --file`|`PATH/data-product-descriptor.json`|Name of the descriptor file
 `--init-param <KEY=VALUE>`| |Initialization parameters
 
 ## Examples
