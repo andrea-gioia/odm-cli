@@ -1,96 +1,61 @@
-# odm-cli
+# Open Data Mesh Command Line
 
-CLI of the Open Data Mesh Platform.
+## Abaut
+This repository is the home of the Open Data Mesh CLI.
 
-# Run it
+## Installation
 
-## Prerequisites
-The project requires the following dependencies:
-* Java 11
-* Maven 3.8.6
+Download the cli
 
-## Run locally
+```bash
+echo TODO
+```
 
-### Clone repository
-Clone the repository and move to the project root folder
+or compile it from the code
 
 ```bash
 git clone git@github.com:opendatamesh-initiative/odm-platform.git
-cd odm-platform
-```
-### Compile parent project
-Compile the project:
-
-```bash
-mvn clean install -DskipTests
-```
-
-### Compile the CLI
-Compile the module:
-
-```bash
 cd odm-cli
 mvn clean package spring-boot:repackage
+cd odm-cli
 ```
 
-### Run the CLI
-Make sure to be in `odm-platform/odm-cli` directory.
+test the cli
 
-#### Unix systems
 ```bash
-./odm-cli <command> [-<options>]
-```
-*_if it won't run, make sure to execute `chmod +x odm-cli`_
-
-For commands documentation, use the _helper_ of the CLI:
-```bash
-./odm-cli -h
-```
-or
-```bash
-./odm-cli --help
-```
-*_Each command have its helper, for example:_
-```bash
-./odm-cli local validate dpv --help
+./odmcli --version
 ```
 
-#### Windows Systems
-```bash
-odm-cli <command> [-<options>]
-```
-For commands documentation, use the _helper_ of the CLI:
-```bash
-odm-cli -h
-```
-or
-```bash
-odm-cli --help
-```
-*_Each command have its helper, for example:_
-```bash
-odm-cli local validate dpv --help
-```
+## Configuration
+By default, the `odmcli` stores its configuration files in a directory called `.odmcli` within your `$HOME` directory.
 
-### Example
-Validate the `dpd-example.json` in the `odm-cli/src/main/resources` directory.
-Once in `odm-cli` directory and given the execution of the previous steps:
+`odmcli` manages most of the files in the configuration directory and you shouldn't modify them. However, you can modify the `config.json` file to control certain aspects of how the `odmcli` command behaves.
 
-_Windows_:
-```bash
-odm-cli local validate dpv -f src/main/resources/dpds/dpd-example.json
-```
-_Unix_:
-```bash
-./odm-cli local validate dpv -f src/main/resources/dpds/dpd-example.json
-```
-or
+You can modify the `odmcli` command behavior using environment variables or command-line options. You can also use options within `config.json` to modify some of the same behavior. If an environment variable and the `--config` flag are set, the flag precedes the environment variable. Command line options override environment variables and environment variables override properties you specify in a `config.json` file.
 
-_Windows_:
-```bash
-odm-cli local validate dpv --file src/main/resources/dpds/dpd-example.json
-```
-_Unix_:
-```bash
-./odm-cli local validate dpv --file src/main/resources/dpds/dpd-example.json
-```
+## Usage
+
+`odmcli [COMMAND] [OPTIONS] [ARGS]`
+
+Manage local env and all interactions with the remote ODM Platform's services
+
+## Commands
+
+Command|Description
+-------|----------
+[`odmcli local`](docs/cmd-local.md)|bla bla
+[`odmcli registry`](docs/cmd-registry.md)|bla bla
+`odmcli blueprint`|bla bla
+`odmcli devops`|bla bla
+`odmcli policy`|bla bla
+
+## Options
+TODO
+
+### Common options
+
+Command|Default|Description
+-------|----------|-------
+`--version, -v`||Version o the command
+`--config`|`$HOME/.odmcli`|Location of odmcli config files
+`-l, --log-level`|`info`|Set the logging level (`debug`, `info`, `warn`, `error`, `fatal`)
