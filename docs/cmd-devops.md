@@ -1,0 +1,22 @@
+# odmcli devops
+
+## Usage
+
+`odmcli devops`
+
+## Description
+
+Interact with remote `devops-service`
+
+## Options
+
+## Subcommands
+
+Command|Description
+-------|----------
+[`odmcli devops list`](cmd-registry-list.md)|List an entity from devops-service
+[`odmcli devops get`](cmd-devops-get.md)|Get an entity from devops-service
+[`odmcli devops publish`](cmd-devops-publish.md)|Publish an entity from devops-service
+[`odmcli devops start`](cmd-devops-start.md)|Start an runnable entity managed by devops-service
+[`odmcli devops stop`](cmd-devops-stop.md)|Stop an runnable entity managed by devops-service
+
