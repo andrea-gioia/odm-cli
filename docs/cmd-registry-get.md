@@ -8,17 +8,13 @@
 
 Get an entity from the registry
 
-**⚒️Implementation details:**
-
-1. TODO
-
 ## Options
 
 Option|Default|Description
 -------|----------|-------
-`--type`||Type of the entity to get (dp\|dpv)
-`--dp-id`||Id of data product. Applicable only if `type` is equal to dpv
-`--dp-version`||Version of the data product. Applicable only if `type` is equal to dpv
+`--type`||Type of the entity to get (`dp`\|`dpv`)
+`--id`||Id of data product. Applicable only if `type` is equal to dpv
+`--dp-version`||Version of the data product. Applicable only if `type` is equal to `dpv`
 
 ## Examples
 
