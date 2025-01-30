@@ -12,7 +12,7 @@ Publish an entity in the `registry-service`
 
 Option|Default|Description
 -------|----------|-------
-`-f, --file`|| File that contains the definition of the entity to publish
+`--entity-file`|| File that contains entity description
 `--type`||Type of the entity to publish (`dp`\|`dpv`)
 `--id`||Id of data product. Applicable only if `type` is equal to `dpv`
 
@@ -20,7 +20,7 @@ Option|Default|Description
 
 ### Publish a local descriptor in the registry
 ```bash
-./odmcli registry publish --type dpv --id dp123 -f dpd/data-product-descriptor.json
+./odmcli registry publish --type dpv --id dp123 --entity-file dpd/data-product-descriptor.json
 ```
 
 
