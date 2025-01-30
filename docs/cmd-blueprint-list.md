@@ -1,24 +1,22 @@
-# odmcli blueprint get
+# odmcli blueprint list
 
 ## Usage
 
-`odmcli blueprint get`
+`odmcli blueprint list`
 
 ## Description
 
-Get an entity from the `blueprint-service`
+List `blueprint-service` entities
 
 ## Options
 
 Option|Default|Description
 -------|----------|-------
-`--type`||Type of the entity to get (`policy`\|`engine``\|`eval`)
-`--id`||Id of of the entity to get
+
 
 ## Examples
 
-### Get policy 123
+### List policies
 ```bash
-./odmcli policy get --type policy --id 123
+./odmcli blueprint list
 ```
-
