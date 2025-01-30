@@ -10,6 +10,10 @@ Interact with remote `devops-service`
 
 ## Options
 
+Option|Default|Description
+-------|----------|-------
+`--service-url`||URL of the devops-service. It must include the port. It overrides the value inside the properties file if it is present
+
 ## Subcommands
 
 Command|Description
