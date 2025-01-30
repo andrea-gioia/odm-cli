@@ -12,8 +12,6 @@ dist/
 
 platform-kernel/
 
-
-
 # Compiled Java class files
 *.class
 
