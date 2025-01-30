@@ -18,7 +18,7 @@ Option|Default|Description
 
 Command|Description
 -------|----------
-[`odmcli devops list`](cmd-devops-list.md)|List entities from `policy-service`
-[`odmcli devops get`](cmd-devops-get.md)|Get an entity from `policy-service`
-[`odmcli devops publish`](cmd-devops-publish.md)|Publish an entity from `policy-service`
+[`odmcli policy list`](cmd-policy-list.md)|List entities from `policy-service`
+[`odmcli policy get`](cmd-policy-get.md)|Get an entity from `policy-service`
+[`odmcli policy publish`](cmd-policy-publish.md)|Publish an entity from `policy-service`
 
