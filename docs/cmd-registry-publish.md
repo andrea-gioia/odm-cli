@@ -7,18 +7,14 @@
 ## Description
 
 Publish an entity in the `registry-service`
-
-**⚒️Implementation details:**
-
-1. TODO
    
 ## Options
 
 Option|Default|Description
 -------|----------|-------
 `-f, --file`|| File that contains the definition of the entity to publish
-`--type`||Type of the entity to get (dp\|dpv)
-`--id`||Id of data product. Applicable only if `type` is equal to dpv
+`--type`||Type of the entity to publish (`dp`\|`dpv`)
+`--id`||Id of data product. Applicable only if `type` is equal to `dpv`
 
 ## Examples
 
