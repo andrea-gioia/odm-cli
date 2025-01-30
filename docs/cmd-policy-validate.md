@@ -12,7 +12,7 @@ Validate a document with the `policy-service`
 
 Option|Default|Description
 -------|----------|-------
-`--document-file`||The file taht contains the document to validate
+`--document-file`||The file that contains the document to validate
 
 
 ## Examples
