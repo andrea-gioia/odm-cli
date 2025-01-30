@@ -43,7 +43,7 @@ Manage local env and all interactions with the remote ODM Platform's services
 
 Command|Description
 -------|----------
-[`odmcli local`](docs/cmd-local.md)|bla bla
+[`odmcli local`](docs/cmd-local.md)|Manage local env
 [`odmcli registry`](docs/cmd-registry.md)|bla bla
 `odmcli blueprint`|bla bla
 `odmcli devops`|bla bla
