@@ -1,9 +1,5 @@
 package org.opendatamesh.odm.cli.commands.registry;
 
-import org.opendatamesh.odm.cli.commands.registry.get.RegistryGetCommand;
-import org.opendatamesh.odm.cli.commands.registry.list.RegistryListCommand;
-import org.opendatamesh.odm.cli.commands.registry.publish.RegistryPublishCommand;
-import org.opendatamesh.odm.cli.commands.registry.upload.RegistryUploadCommand;
 import org.opendatamesh.odm.cli.utils.CliFileUtils;
 import org.opendatamesh.odm.cli.utils.InputManagerUtils;
 import org.opendatamesh.platform.pp.registry.api.clients.RegistryClient;

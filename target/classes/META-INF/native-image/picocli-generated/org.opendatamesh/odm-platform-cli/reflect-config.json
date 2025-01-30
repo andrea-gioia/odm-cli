@@ -161,48 +161,6 @@
     ]
   },
   {
-    "name" : "org.opendatamesh.odm.cli.commands.devops.start.DevOpsStartCommands",
-    "allDeclaredConstructors" : true,
-    "allPublicConstructors" : true,
-    "allDeclaredMethods" : true,
-    "allPublicMethods" : true,
-    "fields" : [
-      { "name" : "devOpsCommands" }
-    ]
-  },
-  {
-    "name" : "org.opendatamesh.odm.cli.commands.devops.start.StartActivityCommand",
-    "allDeclaredConstructors" : true,
-    "allPublicConstructors" : true,
-    "allDeclaredMethods" : true,
-    "allPublicMethods" : true,
-    "fields" : [
-      { "name" : "activityId" },
-      { "name" : "devOpsStartCommands" }
-    ]
-  },
-  {
-    "name" : "org.opendatamesh.odm.cli.commands.devops.stop.DevOpsStopCommands",
-    "allDeclaredConstructors" : true,
-    "allPublicConstructors" : true,
-    "allDeclaredMethods" : true,
-    "allPublicMethods" : true,
-    "fields" : [
-      { "name" : "devOpsCommands" }
-    ]
-  },
-  {
-    "name" : "org.opendatamesh.odm.cli.commands.devops.stop.StopTaskCommand",
-    "allDeclaredConstructors" : true,
-    "allPublicConstructors" : true,
-    "allDeclaredMethods" : true,
-    "allPublicMethods" : true,
-    "fields" : [
-      { "name" : "devOpsStopActivityCommand" },
-      { "name" : "taskId" }
-    ]
-  },
-  {
     "name" : "org.opendatamesh.odm.cli.commands.local.AddCommand",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
@@ -473,18 +431,7 @@
     ]
   },
   {
-    "name" : "org.opendatamesh.odm.cli.commands.registry.get.GetDpCommand",
-    "allDeclaredConstructors" : true,
-    "allPublicConstructors" : true,
-    "allDeclaredMethods" : true,
-    "allPublicMethods" : true,
-    "fields" : [
-      { "name" : "dataProductId" },
-      { "name" : "registryGetCommand" }
-    ]
-  },
-  {
-    "name" : "org.opendatamesh.odm.cli.commands.registry.get.GetDpvCommand",
+    "name" : "org.opendatamesh.odm.cli.commands.registry.RegistryGetCommand",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
     "allDeclaredMethods" : true,
@@ -492,101 +439,44 @@
     "fields" : [
       { "name" : "dataProductId" },
       { "name" : "dataProductVersion" },
-      { "name" : "registryGetCommand" }
+      { "name" : "registryCommands" },
+      { "name" : "type" }
     ]
   },
   {
-    "name" : "org.opendatamesh.odm.cli.commands.registry.get.RegistryGetCommand",
-    "allDeclaredConstructors" : true,
-    "allPublicConstructors" : true,
-    "allDeclaredMethods" : true,
-    "allPublicMethods" : true,
-    "fields" : [
-      { "name" : "registryCommands" }
-    ]
-  },
-  {
-    "name" : "org.opendatamesh.odm.cli.commands.registry.list.ListDpCommand",
-    "allDeclaredConstructors" : true,
-    "allPublicConstructors" : true,
-    "allDeclaredMethods" : true,
-    "allPublicMethods" : true,
-    "fields" : [
-      { "name" : "registryListCommand" }
-    ]
-  },
-  {
-    "name" : "org.opendatamesh.odm.cli.commands.registry.list.ListDpvCommand",
+    "name" : "org.opendatamesh.odm.cli.commands.registry.RegistryListCommand",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
     "allDeclaredMethods" : true,
     "allPublicMethods" : true,
     "fields" : [
       { "name" : "dataProductId" },
-      { "name" : "registryListCommand" }
+      { "name" : "registryCommands" },
+      { "name" : "type" }
     ]
   },
   {
-    "name" : "org.opendatamesh.odm.cli.commands.registry.list.RegistryListCommand",
-    "allDeclaredConstructors" : true,
-    "allPublicConstructors" : true,
-    "allDeclaredMethods" : true,
-    "allPublicMethods" : true,
-    "fields" : [
-      { "name" : "registryCommands" }
-    ]
-  },
-  {
-    "name" : "org.opendatamesh.odm.cli.commands.registry.publish.PublishDpCommand",
-    "allDeclaredConstructors" : true,
-    "allPublicConstructors" : true,
-    "allDeclaredMethods" : true,
-    "allPublicMethods" : true,
-    "fields" : [
-      { "name" : "dataProductDescriptorPath" },
-      { "name" : "registryPublishCommand" }
-    ]
-  },
-  {
-    "name" : "org.opendatamesh.odm.cli.commands.registry.publish.PublishDpvCommand",
+    "name" : "org.opendatamesh.odm.cli.commands.registry.RegistryPublishCommand",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
     "allDeclaredMethods" : true,
     "allPublicMethods" : true,
     "fields" : [
       { "name" : "dataProductId" },
-      { "name" : "dataProductVersionDescriptorPath" },
-      { "name" : "registryPublishCommand" }
-    ]
-  },
-  {
-    "name" : "org.opendatamesh.odm.cli.commands.registry.publish.RegistryPublishCommand",
-    "allDeclaredConstructors" : true,
-    "allPublicConstructors" : true,
-    "allDeclaredMethods" : true,
-    "allPublicMethods" : true,
-    "fields" : [
+      { "name" : "entityDescriptionFilePath" },
+      { "name" : "entityType" },
       { "name" : "registryCommands" }
     ]
   },
   {
-    "name" : "org.opendatamesh.odm.cli.commands.registry.upload.RegistryUploadCommand",
+    "name" : "org.opendatamesh.odm.cli.commands.registry.RegistryUploadCommand",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
     "allDeclaredMethods" : true,
     "allPublicMethods" : true,
     "fields" : [
+      { "name" : "entityType" },
       { "name" : "registryCommands" }
-    ]
-  },
-  {
-    "name" : "org.opendatamesh.odm.cli.commands.registry.upload.UploadDpvCommand",
-    "allDeclaredConstructors" : true,
-    "allPublicConstructors" : true,
-    "allDeclaredMethods" : true,
-    "allPublicMethods" : true,
-    "fields" : [
-      { "name" : "registryUploadCommand" }
     ]
   },
   {
