@@ -6,7 +6,7 @@
 
 ## Description
 
-List entities from the repository
+List `repository-service` entities (i.e. dp or dps)
 
 **⚒️Implementation details:**
 
