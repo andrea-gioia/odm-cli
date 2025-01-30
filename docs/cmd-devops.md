@@ -21,6 +21,6 @@ Command|Description
 [`odmcli devops list`](cmd-devops-list.md)|List entities from `devops-service`
 [`odmcli devops get`](cmd-devops-get.md)|Get an entity from `devops-service`
 [`odmcli devops publish`](cmd-devops-publish.md)|Publish an entity from `devops-service`
-[`odmcli devops start`](cmd-devops-start.md)|Start an runnable entity managed by `devops-service`
-[`odmcli devops stop`](cmd-devops-stop.md)|Stop an runnable entity managed by `devops-service`
+[`odmcli devops start`](cmd-devops-start.md)|Start a runnable entity managed by `devops-service`
+[`odmcli devops stop`](cmd-devops-stop.md)|Stop a runnable entity managed by `devops-service`
 
