@@ -18,5 +18,5 @@ Option|Default|Description
 
 ### List policies
 ```bash
-./odmcli registry list --type policy
+./odmcli policy list --type policy
 ```
