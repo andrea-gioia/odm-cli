@@ -13,7 +13,7 @@ Publish an entity in the `policy-service`
 Option|Default|Description
 -------|----------|-------
 `--entity-file`|| File that contains the entity description
-`--type`||Type of the entity to publish (`policy`\|`engine`|`eval`)
+`--type`||Type of the entity to publish (`policy`\|`engine`\|`eval`)
 
 ## Examples
 
