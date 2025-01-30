@@ -6,11 +6,7 @@
 
 ## Description
 
-List `devops-service` entities (i.e. `ativity` or `task`)
-
-**⚒️Implementation details:**
-
-1. TODO
+List `devops-service` entities (i.e. `activity` or `task`)
 
 ## Options
 
