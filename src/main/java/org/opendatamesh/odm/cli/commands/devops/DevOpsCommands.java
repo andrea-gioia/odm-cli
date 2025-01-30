@@ -1,22 +1,24 @@
 package org.opendatamesh.odm.cli.commands.devops;
 
 
-import org.opendatamesh.odm.cli.commands.devops.get.DevOpsGetCommands;
-import org.opendatamesh.odm.cli.commands.devops.list.DevOpsListCommands;
-import org.opendatamesh.odm.cli.commands.devops.publish.DevOpsPublishCommands;
-import org.opendatamesh.odm.cli.utils.CliFileUtils;
-import org.opendatamesh.odm.cli.utils.InputManagerUtils;
-import org.opendatamesh.platform.pp.devops.api.clients.DevOpsClient;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.opendatamesh.odm.cli.commands.OdmCliInit;
+import org.opendatamesh.odm.cli.commands.devops.subcommands.DevOpsGetCommands;
+import org.opendatamesh.odm.cli.commands.devops.subcommands.DevOpsListCommands;
+import org.opendatamesh.odm.cli.commands.devops.subcommands.DevOpsPublishCommands;
+import org.opendatamesh.odm.cli.commands.registry.RegistryCommands;
+import org.opendatamesh.odm.cli.config.CliConfig;
+
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
-
-import java.io.IOException;
-import java.util.Properties;
+import picocli.CommandLine.ParentCommand;
 
 @Command(
         name = "devops",
-        description = "commands to communicate with devops microservice",
+        description = "Interact with remote devops-service",
         version = "odm-cli devops 1.0.0",
         mixinStandardHelpOptions = true,
         subcommands = {
@@ -27,50 +29,31 @@ import java.util.Properties;
 )
 public class DevOpsCommands implements Runnable {
 
-    DevOpsClient devOpsClient;
+    @Option(names = { "-s",
+            "--service-url" }, description = "URL of the devops-service. It must include the port. It overrides the value inside the properties file, if it is present")
+    String serviceUrl;
 
-    @Option(
-            names = {"-s", "--server"},
-            description = "URL of the DevOps server. It must include the port. It overrides the value inside the properties file, if it is present"
-    )
-    String serverUrlOption;
+    @ParentCommand
+    protected OdmCliInit odmCliInit;
 
-    @Option(
-            names = {"-f", "--properties-file"},
-            description = "Path to the properties file",
-            defaultValue = "./properties.yml"
-    )
-    String propertiesFileOption;
+    public CliConfig getConfig() {
 
-    public DevOpsClient getDevOpsClient() {
-        if (devOpsClient == null) {
-            devOpsClient = setUpDevOpsClient();
-        }
-        return devOpsClient;
-    }
+        CliConfig config = odmCliInit.getConfig();
 
-    private DevOpsClient setUpDevOpsClient() {
-        Properties properties = null;
-        try {
-            properties = CliFileUtils.getPropertiesFromFilePath(propertiesFileOption);
-        } catch (IOException e) {
-            System.out.println("No properties file has been found");
-        }
-        String serverUrl = InputManagerUtils.getPropertyValue(properties, "devops-server", serverUrlOption);
-        if (serverUrl == null) {
-            System.out.println("The devOps server URL wasn't specified. Use the -s option or create a file with the \"devops-server\" property");
-            throw new RuntimeException("The registry server URL wasn't specified");
+        if (serviceUrl != null) {
+            Map<String, String> propsMap = new HashMap();
+            propsMap.put("url", serviceUrl);
+            config.getServices().put("devops", propsMap);
         }
 
-        return new DevOpsClient(serverUrl);
+        return config;
     }
 
     public static void main(String[] args) {
-        CommandLine.run(new DevOpsCommands(), args);
+        CommandLine.run(new RegistryCommands(), args);
     }
 
     @Override
     public void run() {
     }
-
 }

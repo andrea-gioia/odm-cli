@@ -1,11 +1,16 @@
 package org.opendatamesh.odm.cli.commands.local;
 
+import org.opendatamesh.odm.cli.commands.local.subcommands.AddCommand;
+import org.opendatamesh.odm.cli.commands.local.subcommands.ImportCommand;
+import org.opendatamesh.odm.cli.commands.local.subcommands.InitCommand;
+import org.opendatamesh.odm.cli.commands.local.subcommands.ValidateCommand;
+
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 
 @Command(
         name = "local",
-        description = "use the cli for local functionalities",
+        description = "Manage local env",
         version = "odm-cli local 1.0.0",
         mixinStandardHelpOptions = true,
         subcommands = {

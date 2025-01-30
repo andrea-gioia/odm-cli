@@ -6,7 +6,7 @@ import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.ServiceLoader;
 
-import org.opendatamesh.odm.cli.commands.local.ImportTool;
+import org.opendatamesh.odm.cli.commands.local.subcommands.ImportTool;
 
 public class CliExtensionUtils {
 

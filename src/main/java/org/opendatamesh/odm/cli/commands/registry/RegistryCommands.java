@@ -1,67 +1,47 @@
 package org.opendatamesh.odm.cli.commands.registry;
 
-import org.opendatamesh.odm.cli.utils.CliFileUtils;
-import org.opendatamesh.odm.cli.utils.InputManagerUtils;
-import org.opendatamesh.platform.pp.registry.api.clients.RegistryClient;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.opendatamesh.odm.cli.commands.OdmCliInit;
+import org.opendatamesh.odm.cli.commands.registry.subcommands.RegistryGetCommand;
+import org.opendatamesh.odm.cli.commands.registry.subcommands.RegistryListCommand;
+import org.opendatamesh.odm.cli.commands.registry.subcommands.RegistryPublishCommand;
+import org.opendatamesh.odm.cli.commands.registry.subcommands.RegistryUploadCommand;
+import org.opendatamesh.odm.cli.config.CliConfig;
+
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
+import picocli.CommandLine.ParentCommand;
 
-import java.io.IOException;
-import java.util.Properties;
-
-
-@Command(
-        name = "registry",
-        description = "allows to communicate with registry module",
-        version = "odm-cli registry 1.0.0",
-        mixinStandardHelpOptions = true,
-        subcommands = {
-                RegistryListCommand.class,
-                RegistryGetCommand.class,
-                RegistryPublishCommand.class,
-                RegistryUploadCommand.class
-        }
-)
+@Command(name = "registry", description = "Interact with remote registry-service", version = "odm-cli registry 1.0.0", mixinStandardHelpOptions = true, subcommands = {
+        RegistryListCommand.class,
+        RegistryGetCommand.class,
+        RegistryPublishCommand.class,
+        RegistryUploadCommand.class
+})
 public class RegistryCommands implements Runnable {
 
-    RegistryClient registryClient;
+    @Option(names = { "-s",
+            "--service-url" }, description = "URL of the registry-service. It must include the port. It overrides the value inside the properties file, if it is present")
+    String serviceUrl;
 
-    @Option(
-            names = { "-s", "--server" },
-            description = "URL of the Registry server. It must include the port. It overrides the value inside the properties file, if it is present"
-    )
-    String serverUrlOption;
+    @ParentCommand
+    protected OdmCliInit odmCliInit;
 
-    @Option(
-            names = { "-f", "--properties-file" },
-            description = "Path to the properties file",
-            defaultValue = "./properties.yml"
-    )
-    String propertiesFileOption;
+    public CliConfig getConfig() {
+       
+        CliConfig config = odmCliInit.getConfig();
 
-    public RegistryClient getRegistryClient() {
-        if (registryClient == null) {
-            registryClient = setUpRegistryClient();
+        if(serviceUrl != null) {
+            Map<String, String> propsMap = new HashMap();
+            propsMap.put("url", serviceUrl);
+            config.getServices().put("registry", propsMap);
         }
-        return registryClient;
-    }
-
-    private RegistryClient setUpRegistryClient(){
-        Properties properties = null;
-        try {
-            properties = CliFileUtils.getPropertiesFromFilePath(propertiesFileOption);
-        } catch (IOException e) {
-            System.out.println("No properties file has been found");
-        }
-
-        String serverUrl = InputManagerUtils.getPropertyValue(properties, "registry-server", serverUrlOption);
-        if (serverUrl == null) {
-            System.out.println("The registry server URL wasn't specified. Use the -s option or create a file with the \"registry-server\" property");
-            throw new RuntimeException("The registry server URL wasn't specified");
-        }
-
-        return new RegistryClient(serverUrl);
+       
+        
+        return config;
     }
 
     public static void main(String[] args) {
@@ -69,6 +49,7 @@ public class RegistryCommands implements Runnable {
     }
 
     @Override
-    public void run() {}
+    public void run() {
+    }
 
 }

@@ -3,9 +3,15 @@
     "template-folder": "templates",
 
     "services": {
-        "registry-service": "http://localhost:8001",
-        "devops-service": "http://localhost:8002",
-        "blueprint-service": "http://localhost:8003"
+        "registry": {
+            "url": "http://localhost:8001"
+        },
+        "devops":  {
+            "url": "http://localhost:8002"
+        },
+        "blueprint": {
+            "url": "http://localhost:8003"
+        }
     },
 
     "systems": {
