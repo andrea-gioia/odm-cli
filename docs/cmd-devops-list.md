@@ -20,12 +20,12 @@ Option|Default|Description
 
 ## Examples
 
-### List data products
+### List activities
 ```bash
 ./odmcli devops list --type activity
 ```
 
-### List data product versions
+### List tasks
 ```bash
 ./odmcli devops list --type task 
 ```
