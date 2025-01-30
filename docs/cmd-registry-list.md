@@ -1,22 +1,18 @@
-# odmcli repository list
+# odmcli registry list
 
 ## Usage
 
-`odmcli repository list`
+`odmcli registry list`
 
 ## Description
 
-List entities from the repository
-
-**⚒️Implementation details:**
-
-1. TODO
+List `registry-service` entities (i.e. `dp` or `dps`)
 
 ## Options
 
 Option|Default|Description
 -------|----------|-------
-`--type`||Type of the entity to list (dp\|dpv)
+`--type`|`dp`|Type of the entity to list (`dp`\|`dpv`)
 `--dp-id`||Id of data product. Applicable only if `type` is equal to dpv
 
 ## Examples

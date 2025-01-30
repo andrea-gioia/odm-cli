@@ -6,7 +6,7 @@
 
 ## Description
 
-Initializes a descriptor file. 
+Lists elements of a descriptor.
 
 **⚒️Implementation details:**
 

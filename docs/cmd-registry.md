@@ -12,8 +12,8 @@ Interact with remote `registry-service`
 
 Command|Description
 -------|----------
-[`odmcli repository list`](cmd-registry-list.md)|bla bla
-[`odmcli repository get`](cmd-registry-get.md)|bla bla
-[`odmcli repository publish`](cmd-registry-publish.md)|bla bla
-[`odmcli repository publish`](cmd-registry-upload.md)|bla bla
+[`odmcli registry list`](cmd-registry-list.md)|List entities from `registry-service`
+[`odmcli registry get`](cmd-registry-get.md)|Get an entity from `registry-service`
+[`odmcli registry publish`](cmd-registry-publish.md)|Publish an entity to `registry-service`
+[`odmcli registry upload`](cmd-registry-upload.md)|Upload an entity to `registry-service`
 
