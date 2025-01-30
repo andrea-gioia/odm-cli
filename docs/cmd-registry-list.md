@@ -8,10 +8,6 @@
 
 List `registry-service` entities (i.e. `dp` or `dps`)
 
-**⚒️Implementation details:**
-
-1. TODO
-
 ## Options
 
 Option|Default|Description
