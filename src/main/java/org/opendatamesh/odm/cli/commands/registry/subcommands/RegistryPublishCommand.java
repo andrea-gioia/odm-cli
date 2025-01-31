@@ -82,15 +82,18 @@ public class RegistryPublishCommand implements Runnable {
 
         try {
             ResponseEntity<DataProductVersionDPDS> dataProductResponseEntity = registryCommands.getConfig()
-                    .getRegistryServiceClient().postDataProductVersion(entityId, dpv);
+                    .getRegistryServiceClient().postDataProductVersion(entityId, dpv, DataProductVersionDPDS.class);
             if (dataProductResponseEntity.getStatusCode().equals(HttpStatus.CREATED)) {
                 DataProductVersionDPDS dataProductVersion = dataProductResponseEntity.getBody();
                 System.out.println("Data Product Version CREATED:\n"
                         + ObjectMapperUtils.formatAsString(dataProductVersion));
             } else
-                System.out.println(
+                System.err.println(
                         "Got an unexpected response. Error code: "
                                 + dataProductResponseEntity.getStatusCode());
+                                System.err.println(
+                                    "Got an unexpected response. Error code: "
+                                            + dataProductResponseEntity.getBody());
         } catch (ResourceAccessException e) {
             System.out.println("Impossible to connect with Registry server. Verify the URL and retry");
         } catch (Exception e) {
