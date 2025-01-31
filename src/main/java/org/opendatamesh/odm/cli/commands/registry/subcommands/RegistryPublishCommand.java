@@ -82,7 +82,7 @@ public class RegistryPublishCommand implements Runnable {
 
         try {
             ResponseEntity<DataProductVersionDPDS> dataProductResponseEntity = registryCommands.getConfig()
-                    .getRegistryServiceClient().postDataProductVersion(entityId, dpv, DataProductVersionDPDS.class);
+                    .getRegistryServiceClient().postDataProductVersion(entityId, dpv, DataProductVersionDPDS.class); // client API need a fix here
             if (dataProductResponseEntity.getStatusCode().equals(HttpStatus.CREATED)) {
                 DataProductVersionDPDS dataProductVersion = dataProductResponseEntity.getBody();
                 System.out.println("Data Product Version CREATED:\n"
