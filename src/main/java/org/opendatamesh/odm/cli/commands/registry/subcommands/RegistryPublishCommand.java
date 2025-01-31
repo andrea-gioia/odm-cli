@@ -21,11 +21,10 @@ public class RegistryPublishCommand implements Runnable {
     @ParentCommand
     protected RegistryCommands registryCommands;
 
-    @Option(names = { "-f",
-            "--file" }, description = "File that contains the definition of the entity to publish", required = true)
+    @Option(names = "--entity-file", description = "File that contains entity description", required = true)
     String entityFilePath;
 
-    @Option(names = "--entity-file", description = "File that contains entity description", required = true)
+    @Option(names = "--type", description = "The type of the entity to publish (dp|dpv)", required = true)
     String entityType;
 
     @Option(names = "--id", description = "Id of data product. Applicable only if type is equal to dpv", required = false)
