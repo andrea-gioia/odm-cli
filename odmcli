@@ -18,8 +18,8 @@ if [ -z "$jar_file" ]; then
     exit 1
 fi
 
-#java -jar "target/$jar_file" "$@"
+java -jar "target/$jar_file" "$@"
 #java -cp "extensions/*.jar:target/$jar_file" -jar "target/$jar_file" "$@"
 #java -cp "target/$jar_file:target/$jar_file!/BOOT-INF/classes:target/$jar_file!/BOOT-INF/lib/*:extensions/*.jar" org.opendatamesh.odm.cli.OdmCliApplication "$@"
 
-java -cp "extensions/*.jar:target/$jar_file" org.springframework.boot.loader.JarLauncher "$@"
+#java -cp "extensions/*.jar:target/$jar_file" org.springframework.boot.loader.JarLauncher "$@"

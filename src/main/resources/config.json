@@ -1,6 +1,6 @@
 {
-    "extension-folder": "estensions",
-    "template-folder": "templates",
+    "extensions-folder": "extensions",
+    "templates-folder": "templates",
 
     "services": {
         "registry": {
