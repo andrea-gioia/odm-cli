@@ -1,0 +1,30 @@
+{
+    "extensions-folder": "extensions",
+    "templates-folder": "templates",
+
+    "services": {
+        "registry": {
+            "url": "http://localhost:8001"
+        },
+        "devops":  {
+            "url": "http://localhost:8002"
+        },
+        "blueprint": {
+            "url": "http://localhost:8003"
+        }
+    },
+
+    "systems": {
+        "testdb": {
+            "url": "jdbc:mysql://localhost:3306/",
+            "user": "root",
+            "password": "root"
+        }
+    },
+
+    "env": {
+        "odm.user.name": "Andrea Gioia",
+        "odm.user.email": "andrea.gioia@quantyca.it",
+        "odm.namespace": "org.odm"
+    } 
+}
